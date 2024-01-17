@@ -1,0 +1,104 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title></title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="">
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville&family=Patrick+Hand&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@300&display=swap" rel="stylesheet">
+  <!-- Google Fonts End -->
+  <!-- reference your installed Font Awesome Free package's files here -->
+  <link href="{% static 'fontawesomefree/css/all.min.css' %}" rel="stylesheet" type="text/css">
+  <link href="{% static 'fontawesomefree/css/fontawesome.css' %}" rel="stylesheet" type="text/css">
+  <link href="{% static 'fontawesomefree/css/brands.css' %}" rel="stylesheet" type="text/css">
+  <link href="{% static 'fontawesomefree/css/solid.css' %}" rel="stylesheet" type="text/css">
+  <!--End Fontawesome-->
+  <!--StyleSheets-->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+  <link rel="stylesheet" href="{% static 'assets/css/style.css' %}">
+  <link rel="stylesheet" href="{% static 'assets/css/about.css' %}">
+  <!-- Stylesheets end -->
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand text-light fs-2" href="#"><img class="responsive"
+        src="{% static 'assets/images/Homepage/logo.png' %}"></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+        aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav fs-3 spacingnav">
+          <a class="nav-link " href="/">Home</a>
+          <a class="nav-link active" href="about">About</a>
+          <a class="nav-link navItm"  href="getstarted">Get Started</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <div class="d-flex justify-content-between">
+    <div class="img-left text-light col-4">
+      <div class="circle-wrapper">
+        <div class="borderDeco circle"></div>
+        <div class="icon">
+          <img src="{% static 'assets/images/About/mypicture.jpg' %}">
+        </div>
+      </div>
+      <div class="intro">
+        <p class="greet-text">
+         <h1> Hi,<br>
+          My name is <span class="myname" style="color:gold;">Aditya Bhatia.</span></h1>
+        </p>
+        <div class="social-links mt-5 py-2">
+          <h3><p>Connect with me:  <span><a href="https://www.linkedin.com/in/aditya-bhatia-9a2b04208/" style="color:white;"><i class="fa-brands fa-linkedin"></i></a></span></p></h3>
+        </div>
+        <div class="social-links mt-5 py-2">
+          <a href="https://drive.google.com/uc?export=download&id=1tBUSxWseyMZsvzVl3ywiFvA9SpEZ2GXY" style="text-transform:none; text-decoration:none; color:white;"><h3>Resume</h3></a>
+        </div>
+      </div>
+    </div>
+    <div class="text-light col-5">
+      <p id="heading">
+        About <span style="color:gold;"> Me.</span>
+      </p>
+      <div class="intro-para">
+        <p id="intro">
+          Proactive student eager to gain skills in coding who loves to lead, manage
+          and take responsibilities. Currently pursuing Btech in Computer Science
+          from Gurugobind Singh Indraprastha University. Seeking to leverage
+          exemplary communication and development skills. Proficient in C++, Data
+          Structures, HTML5, CSS and Javascript. Enthusiastic about web development.
+        </p>
+      </div>
+      <div class="skill-set">
+        <p id="heading">
+        Current <span style="color:gold;"> Skill-Set.</span>
+        </p>
+        <div class="skills">
+               <li id="skill"><b><span style="color:gold;">Front-End: </span></b>HTML, CSS, Bootstrap, SASS, Javascript, ReactJS</li>
+               <li id="skill"><b><span style="color:gold;">Back-End: </span></b>NodeJS, ExpressJS, PassportJS, MongoDB</li>
+               <li id="skill"><b><span style="color:gold;">Language: </span></b>Data Structures in C++</li>
+               <li id="skill"><b><span style="color:gold;">Others: </span></b>Wix, Wordpress, Shopify</li>
+        </div>
+      </div>
+    </div>
+    <div class="img-right col-3">
+  
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+</body>
+
+</html>

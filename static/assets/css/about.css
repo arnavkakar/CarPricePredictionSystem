@@ -1,0 +1,126 @@
+/* .try{
+    display: flex;
+    justify-content: space-around;
+} */
+body {
+  margin: 0px;
+  flex-wrap: wrap;
+}
+
+.response {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.img-left,
+.img-right,
+.center {
+
+  height: 100vh;
+}
+
+/* Border animation */
+.circle-wrapper {
+  position: relative;
+  margin: 10px;
+  width: 350px;
+  height: 350px;
+  left: 30px;
+}
+
+.circle {
+  width: 100%;
+  height: 100%;
+  padding: 2.5px;
+  border-radius: 50%;
+  background-clip: content-box;
+  animation: spin 10s linear infinite;
+}
+
+.circle-wrapper:active .circle {
+  animation: spin 2s linear infinite;
+}
+
+.icon img {
+  border-radius: 50%;
+  width: 333px;
+  height: 333px;
+}
+
+.icon {
+  position: absolute;
+  top: 10px;
+  left: 8px;
+}
+
+.borderDeco {
+  border: 2.5px dashed gold;
+}
+
+@keyframes spin {
+  100% {
+    transform: rotateZ(360deg);
+  }
+}
+
+/* end */
+.intro-para {
+  width: 100%;
+  padding: 20px;
+  /* background: rgba( 255, 255, 255, 0.15 );
+  box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+  backdrop-filter: blur( 14px );
+  -webkit-backdrop-filter: blur( 14px );
+  border-radius: 10px; */
+  border-radius: 50px;
+  background: #1d1f21;
+  box-shadow: 35px 35px 32px #0c0c0d,
+    -35px -35px 32px #2e3235;
+  /* border: 1px solid rgba( 255, 255, 255, 0.18 ); */
+}
+
+#heading {
+  margin-top: 15px;
+  font-size: 3rem;
+  font-family: 'Patrick Hand', cursive;
+}
+
+#intro {
+  font-size: large;
+  font-family: 'Assistant', sans-serif;
+}
+#skill {
+  width: 100%;
+  padding: 20px;
+  margin-top: 25px;
+  border-radius: 50px;
+  font-size: larger;
+  border-radius: 50px;
+  background: #1d1f21;
+  box-shadow: 19px 19px 18px #0c0c0d,
+    -19px -19px 18px #2e3235;
+}
+li{
+  list-style:none;
+}
+.greet{
+  margin-left:15px;
+}
+.social-links{
+  /* margin-top:30px; */
+  width:20vw;
+  /* padding:5px 10px; */
+  text-align: center;
+  border-radius: 50px;
+  background: #1d1f21;
+  box-shadow: 19px 19px 18px #0c0c0d,
+    -19px -19px 18px #2e3235;
+}
+@media only screen and (max-width: 768px) {
+  /* For mobile phones: */
+  [class*="col-"] {
+    width: 100%;
+  }
+}

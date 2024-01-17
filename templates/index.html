@@ -1,0 +1,116 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>CarHub</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Alegreya+Sans+SC:wght@500&family=Viga&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Alegreya:wght@500&display=swap" rel="stylesheet">
+  <!-- Google Fonts End -->
+  <!--Stylesheets-->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+  <link rel="stylesheet" href="{% static 'assets/css/style.css' %}">   
+  <!--Stylesheets end-->
+</head>
+
+<body style="background-image:url({% static 'assets/images/Homepage/mustang-front.png'%}); background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;">
+  <!--  navbar    -->  
+  <nav class="navbar navbar-expand-lg navbar-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand text-light fs-2" href="#"><img class="responsive"
+          src="{% static 'assets/images/Homepage/logo.png' %}"></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+        aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse px-5" id="navbarNavAltMarkup">
+        <div class="navbar-nav fs-3 spacingnav">
+          <a class="nav-link active navItm" href="/">Home</a>
+          <a class="nav-link navItm" href="about">About</a>
+          <a class="nav-link navItm" href="getstarted">Get Started</a>
+        </div>
+        <button class="btn btn-outline-warning my-2 my-sm-0 login" onclick="change()" type="submit">Log In</button>
+      </div>
+    </div>
+  </nav>
+  <!--navbar end-->
+  <!--Main-->
+  <main>
+    <div class="cardContainer">
+      <div class="card" style="background-color: transparent;">
+        <img src="{% static 'assets/images/Homepage/sitting.png' %}" class="responsive">
+        <div>
+          <a href="https://drive.google.com/uc?export=download&id=1Mig1YfthgYmuXsnc_bIJZ1OuznFZkQ80" class="download"><button>Download Dataset</button></a>
+        </div>
+      </div>
+      <div class="card" style="background-color: transparent;" >
+        <div class="bubble">
+          <div class="wrapper">
+            <div class="typing-demo">
+              <p><span id="hi">Hi,</span><h1>Welcome to <span style="color:gold;">CarHub.</span></h1></p>
+            </div>
+        </div>
+        </div>
+      </div>
+      <div class="card" style="background-color:transparent; color:white;">
+       <div id="confusedtxt"> <p><span style="font-family: 'Alegreya Sans SC', sans-serif; color:gold; font-size:5.5rem;">Confused</span><span style="font-family: 'Alegreya', serif; font-size:3.5rem;"> about the price of your Car?</span></p></div>
+       <div id="soltxt"> <p><span style="font-family: 'Alegreya', serif; font-size:4rem;">We got a </span><span style="font-family: 'Alegreya Sans SC', sans-serif; color:gold; font-size:5.5rem;">solution!</span></p></div>
+      </div>
+      <div class="card" style="background-color: transparent;">
+        <p style="font-family: 'Alegreya', serif; font-size:2.4rem;">A <span style="font-family: 'Alegreya Sans SC', sans-serif; color:gold; font-size:5.5rem;">free</span> tool designed to help you get the estimated <span style="font-family: 'Alegreya Sans SC', sans-serif; color:gold; font-size:5.5rem;">value</span> of your car within <span style="font-family: 'Alegreya Sans SC', sans-serif; color:gold; font-size:5.5rem;">seconds.</span></p>
+      </div>
+    </div>
+    <div class="one" id="visible-block">
+      <div class="overlay"></div>
+      <div class="middle" id="visible">
+        <div class="overlay2" onclick="popup()"></div>
+        <div class="two">
+          <div class="employee">
+            <img src="{% static 'assets/images/Homepage/employee.png' %}">
+          </div>
+          <form>
+            <div class="form-field">
+              <input type="email" placeholder="Email / Username" required />
+            </div>
+  
+            <div class="form-field">
+              <input type="password" placeholder="Password" required />
+            </div>
+  
+            <div class="form-field">
+              <button class="btn" type="submit">Log in</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <footer> <small>&copy; Copyright 2022, CarHub by Aditya Bhatia.</small> </footer> 
+  </main>
+  <!--Main End-->
+  <!--Script-->
+  <script>
+    function change() {
+      document.getElementById('visible').style.top = "0";
+      document.getElementById('visible-block').style.top = "0";
+    }
+    function popup() {
+      document.getElementById('visible').style.top = "-100%";
+      document.getElementById('visible-block').style.top = "-100%";
+    }
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+    crossorigin="anonymous"></script>
+</body>
+</html>

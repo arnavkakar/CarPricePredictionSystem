@@ -1,0 +1,102 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title></title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="">
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville&family=Patrick+Hand&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@300&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Viga&display=swap" rel="stylesheet">
+  <!-- Google Fonts End -->
+  <!-- reference your installed Font Awesome Free package's files here -->
+  <link href="fontawesomefree/css/all.min.css" rel="stylesheet" type="text/css">
+  <link href="fontawesomefree/css/fontawesome.css" rel="stylesheet" type="text/css">
+  <link href="fontawesomefree/css/brands.css" rel="stylesheet" type="text/css">
+  <link href="fontawesomefree/css/solid.css" rel="stylesheet" type="text/css">
+  <!--End Fontawesome-->
+  <!--StyleSheets-->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+ <link rel="stylesheet" href="{% static 'assets/css/getstarted.css' %}"> 
+  <!-- Stylesheets end -->
+</head>
+
+<body style="background-image:url('{% static 'assets/images/Homepage/mustang-front.png' %}'); background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    opacity: 100%;">
+  <nav class="navbar navbar-expand-lg navbar-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand text-light fs-2" href="#"><img src="{% static 'assets/images/Homepage/logo.png' %}"></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+        aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav fs-3 spacingnav">
+          <a class="nav-link " href="/">Home</a>
+          <a class="nav-link" href="../about">About</a>
+          <a class="nav-link active" href="getstarted">Get Started</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <main>
+    <div class="bubble">
+     Just give us some necessary details and let us predict the<span style="color:gold; text-transform: uppercase;"> estimated </span>price for your car!
+    </div>
+    <div class="character">
+    <img src="{% static 'assets/images/Getstarted/character.png' %}">
+    </div>
+    <div class="inputs">
+      <!--Form-->
+      {% csrf_token %}
+    <form action="result" type="post">
+         <input type="text" name="car" placeholder="Enter Company of the Car" required>
+         <input type="text" name="price" placeholder="Enter Your Price" required>
+         <input type="text" name="body" placeholder="Enter Segment of the Car" required>
+         <input type="text" name="mileage" placeholder="Enter Mileage of the Car" required>
+         <input type="text" name="engV" placeholder="Enter Engine Volume" required>
+         <input type="text" name="engType" placeholder="Enter engine type" required>
+         <select name="registration"  placeholder="Select an option" required>
+          <option value="" disabled selected>Registration of car</option>
+           <option value="yes">
+              Yes
+           </option>
+           <option value="no">
+              No
+           </option>
+         </select>
+         <input type="text" name="year" placeholder="Enter year" required>
+         <input type="text" name="model" placeholder="Enter model" required>
+         <input type="text" name="drive" placeholder="Enter drive" required>
+         <button type="submit" value="PREDICT">Predict</button>
+    </form>
+    <!--  Form end    -->
+   
+    <a href="/getstarted" style="position: absolute;
+    left: 52%;
+    bottom: 17%;
+    color: white;
+    text-transform: none;
+    text-decoration: none;
+    font-size: 1.5rem;
+    border: 1px solid gold;
+    border-radius: 15px;">Try for Another Car</a>
+    </div>
+    <div class="prediction">
+    <h2>The predicted price for your car is: $ <span style="background-color:gold; color:black; border-radius:10px;">{{ans}}</span></h2>
+    </div> 
+</main>
+</body>
+
+</html>
